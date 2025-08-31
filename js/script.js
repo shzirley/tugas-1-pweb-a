@@ -1,11 +1,10 @@
-// js/script.js
-window.addEventListener("scroll", function() {
-  const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
 
   for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 150;
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -13,4 +12,7 @@ window.addEventListener("scroll", function() {
       reveals[i].classList.remove("active");
     }
   }
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
