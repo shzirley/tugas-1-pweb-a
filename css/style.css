@@ -1,43 +1,84 @@
+/* GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
 /* HEADER */
 .header {
   width: 100%;
-  height: 250px;
-  background-image: url('https://github.com/shzirley/tugas-1-pweb-a/blob/main/Menguasai%20Skill%20Type.png?raw=true');
+  height: 300px;
+  background-image: url("https://github.com/shzirley/tugas-1-pweb-a/blob/main/Menguasai%20Skill%20Type.png?raw=true");
   background-size: cover;
   background-position: center;
-}
-
-/* NAVBAR */
-.navbar {
-  background-color: #222;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar ul {
-  list-style: none;
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.header .overlay {
+  background: rgba(0, 0, 0, 0.5); /* transparan biar teks kebaca */
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #fff;
   margin: 0;
-  padding: 0;
 }
 
-.navbar ul li {
-  margin: 0 15px;
+.header p {
+  color: #ddd;
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
+/* KONTEN */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
 
-.navbar ul li a:hover {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+/* IMAGE */
+.image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* SCROLL REVEAL EFFECT */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    height: 200px;
+  }
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  .header p {
+    font-size: 0.9rem;
+  }
 }
