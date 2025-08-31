@@ -1,11 +1,19 @@
-function tampilkanAnalisis() {
-  document.getElementById("analisis").innerHTML = `
-    <p>
-      Dengan kecepatan <b>38 WPM</b> dan akurasi <b>97%</b>, 
-      hasil ini sudah cukup baik untuk pemula. 
-      Rata-rata kecepatan mengetik orang umum sekitar 40 WPM, 
-      jadi performa ini hampir setara rata-rata. 
-      Dengan latihan teratur, target selanjutnya adalah mencapai 50–60 WPM dengan akurasi tetap tinggi.
-    </p>
-  `;
+// Animasi muncul saat scroll
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
 }
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
