@@ -1,3 +1,4 @@
+// Animasi muncul saat scroll
 function revealOnScroll() {
   let reveals = document.querySelectorAll(".reveal");
 
