@@ -1,11 +1,11 @@
-// Animasi muncul saat scroll
-function revealOnScroll() {
-  let reveals = document.querySelectorAll(".reveal");
+// js/script.js
+window.addEventListener("scroll", function() {
+  const reveals = document.querySelectorAll(".reveal");
 
   for (let i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 100;
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 150;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -13,7 +13,4 @@ function revealOnScroll() {
       reveals[i].classList.remove("active");
     }
   }
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+});
