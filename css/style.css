@@ -1,58 +1,94 @@
-/* Reset sederhana */
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+    background-color: #e6f0ff;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* Header */
+header {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
 }
 
-h2 {
-  margin-top: 30px;
-  color: #444;
-  border-left: 4px solid #4a90e2;
-  padding-left: 10px;
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
 }
 
-a {
-  color: #4a90e2;
-  text-decoration: none;
+.header-overlay {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-a:hover {
-  text-decoration: underline;
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
 }
 
-.image {
-  text-align: center;
-  margin: 20px 0;
+.header-text p {
+    font-size: 1.5rem;
 }
 
-.image img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  max-width: 100%;
-  height: auto;
+/* Content */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* Animasi Scroll Reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease-out;
+.content section {
+    margin-bottom: 2rem;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+.content ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.content a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.separator img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
 }
